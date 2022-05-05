@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Sistema de Votos</title>
+    </head>
+
+        <body>
+            <center>
+            <div> 
+            <h1>Sistema de votos brasileiro</h1>
+
+            <div id="barra"> 
+                Qual o seu nome?<input type="text" id="nome" name="nome">
+                    <input  type="button" value="continuar" onclick="continuar()"> 
+                    <div id="resNome"></div>
+
+              Quantos anos você tem? <input type="text" id="idade" name="idade"> 
+                            <input type="button" value="continuar" onclick="continuar()"> 
+                            <div id="resul"></div> 
+                        </div>
+                    </div>
+            </center>
+                            <img id="urna1" src="../Sistema de Votos/urna.png">
+                            <img id="urna" src="../Sistema de Votos/urna.png">
+                            <img id="gov" src="../Sistema de Votos/gov.png">
+                            <img id="pais" src="../Sistema de Votos/pais.png">
+                            <img id="brasil" src="../Sistema de Votos/brasil.png">
+            
+                 <script>
+            
+               function continuar() {
+                   event.preventDefault()
+                    let resNome = document.getElementById('resNome')
+                    let nome = document.querySelector('input#nome')
+                    let res = nome.value; 
+                    let resIdad = document.getElementById('idade') 
+                    let resultado = document.getElementById('resul') 
+                    let resul = Number(idade.value);
+                    
+                    if (res || resul === null){
+                        document.write('Olá ' + res + ',' + ' a sua idade é: ' + resul + ' anos')
+                    } else{
+                        alert("Preencha os dados corretamente");  
+                        return verificar;
+                    }
+
+                    if(resul < 16) {
+                        document.write('<p>você NÃO VOTA!</p>')
+                    } else if (resul < 18 || resul > 65) {
+                        document.write('<p> você tem VOTO OPCIONAL!</p>')
+                    } else 
+                        document.write('<p> você VOTA!</p>')
+                    }
+            </script>
+
+            <style>
+
+                body{
+                    background-image: linear-gradient(45deg, white, rgb(61, 61, 238)) ;
+                    font: arial;
+                    font-size: 25px;
+                    text-align: center;
+                }
+
+                #barra {
+                    background-color:gold;
+                    position: fixed;
+                    right: 500px;
+                    left: 500px;
+                    top: 120px;
+                    padding: 30px;
+                    border: 10px;
+                    border-left: 5px;
+                    border-right: 5px;
+                    border-radius: 20px;
+                    text-align: center;
+                    align-items: center;
+                }
+
+            #urna {
+                position: fixed;
+                left: 910px;
+                top: 25%;
+            }
+            #urna1 {
+                position: fixed;
+                right: 910px;
+                top: 25%;
+            }
+
+            input { 
+                font: normal 17pt arial;
+                align-items: center;
+                text-align: center;
+            }
+            
+            #gov {
+                position: fixed;
+                right: 1020px;
+                top: 20px;
+                width: 270px;
+                height: 150px;
+            } 
+             
+            #brasil {
+                position: fixed;
+                text-align: center;
+                top: 68%;
+                left: 41%;
+                width: 270px;
+                height: 150px;
+            }  
+             
+            #pais {
+                position: fixed;
+                left: 1020px;
+                top: 20px;
+                width: 270px;
+                height: 150px;
+            }
+
+            </style>
+             
+            
+        </body>
+</html>

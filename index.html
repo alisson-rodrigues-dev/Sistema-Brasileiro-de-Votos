@@ -28,7 +28,7 @@
                  <script>
             
                function continuar() {
-                   event.preventDefault()
+                  
                     let resNome = document.getElementById('resNome')
                     let nome = document.querySelector('input#nome')
                     let res = nome.value; 
@@ -37,18 +37,19 @@
                     let resul = Number(idade.value);
                     
                     if (res || resul === null){
-                        document.write('Olá ' + res + ',' + ' a sua idade é: ' + resul + ' anos')
+
+                        alert('Olá ' + res + ',' + ' a sua idade é: ' + resul + ' anos')
                     } else{
                         alert("Preencha os dados corretamente");  
                         return verificar;
                     }
 
-                    if(resul < 16) {
-                        document.write('<p>você NÃO VOTA!</p>')
+                    if(resul < 16) { 
+                       alert ('você NÃO VOTA!')
                     } else if (resul < 18 || resul > 65) {
-                        document.write('<p> você tem VOTO OPCIONAL!</p>')
+                        alert( 'você tem VOTO OPCIONAL')
                     } else 
-                        document.write('<p> você VOTA!</p>')
+                        alert( 'você VOTA!')
                     }
             </script>
 
@@ -105,7 +106,7 @@
                 position: fixed;
                 text-align: center;
                 top: 68%;
-                left: 41%;
+                left: 40%;
                 width: 270px;
                 height: 150px;
             }  
